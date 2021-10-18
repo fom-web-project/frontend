@@ -8,6 +8,11 @@ const routes = [
     component: Home,
   },
   {
+    path: "/dashboard",
+    name: "Dashboard",
+    component: () => import("../views/Dashboard.vue"),
+  },
+  {
     path: "/sign-in",
     name: "SignIn",
     component: () => import("../views/SignIn.vue"),
