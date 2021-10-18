@@ -1,9 +1,11 @@
 <template>
-  <header>
-    <Navigation />
-  </header>
+  <div class="bg-gray-100">
+    <header>
+      <Navigation />
+    </header>
 
-  <router-view />
+    <router-view />
+  </div>
 </template>
 
 <script>
