@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <h1>SignUp</h1>
-  </div>
+  <AuthForm title="Sign up" :isSignIn="false" />
 </template>
 
 <script>
+import AuthForm from "../components/AuthForm.vue";
+
 export default {
   name: "SignUp",
-  components: {},
+  components: {
+    AuthForm,
+  },
 };
 </script>
