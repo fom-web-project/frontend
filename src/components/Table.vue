@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-16 min-h-screen">
+  <div class="course-list-row flex flex-col p-16 min-h-screen">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
         <div
@@ -69,8 +69,8 @@
                 </th>
               </tr>
             </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
-              <tr>
+            <tbody class="coure-list-row bg-white divide-y divide-gray-200">
+              <tr v-for="user in users" v-bind:key="user">
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="flex items-center">
                     <div class="flex-shrink-0 h-10 w-10">
@@ -82,7 +82,7 @@
                     </div>
                     <div class="ml-4">
                       <div class="text-sm font-medium text-gray-900">
-                        Jane Cooper
+                        {{ user.first_name }}
                       </div>
                       <div class="text-sm text-gray-500">
                         jane.cooper@example.com
@@ -138,3 +138,20 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "coure-list-row",
+  data: function () {
+    return {
+      users: [
+        {
+          first_name: "Peter",
+          last_name: "Maffay",
+          mail: "peter@maffay.de"
+        }
+      ]
+    }
+  }
+}
+</script>
