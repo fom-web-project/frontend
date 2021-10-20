@@ -17,4 +17,5 @@ jobs:
           cmd: build # will run `yarn build` command
       - name: Yarn lint
         uses: borales/actions-yarn@v2.3.0
+        with:
           cmd: run lint # will run the linter
